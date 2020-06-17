@@ -1,12 +1,15 @@
+/* css 전체 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 제목 부분 */
 header {
     background-color: teal;
     padding: 15px;
+    /* 메인 컨텐츠 영역과 거리 설정 */
     margin-bottom: 15px;
 }
 
@@ -14,6 +17,7 @@ header h1 {
     color: white;
     font-weight: normal;
     font-size: 35px;
+    /* css 상단부에서 margin, padding를 모두 0으로 초기화함 */
 }
 
 header .left {
@@ -22,15 +26,18 @@ header .left {
 
 header .right {
     float: right;
+    /* 텍스트가 기본적으로 왼쪽 정렬이기 때문에 오른쪽 정렬로 변경 */
     text-align: right;
 }
 
 .fa {
     color: white;
     font-size: 36px;
+    /* 제목 부분과 거리를 띄우기 위해서 설정 */
     margin-top: 20px;
 }
 
+/* header의 자손 태그가 float을 사용하였기 때문에 float 속성 해제 */
 header::after {
     content: "";
     display: table;
@@ -54,6 +61,7 @@ section::after {
     padding: 0px 10px;
 }
 
+/* 주어진 화면 크기만큼 이미지 크기를 설정 */
 div.pic, div.pic > img { width: 100%; }
 
 div.info h2 {
@@ -62,7 +70,9 @@ div.info h2 {
 }
 
 div.info table {
+    /* 테이블의 크기를 최대 크기로 */
     width: 100%;
+    /* 각 td의 border(테두리선)을 하나로 합함 */
     border-collapse: collapse;
 }
 
